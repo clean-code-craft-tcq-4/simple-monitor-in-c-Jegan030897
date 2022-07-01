@@ -24,6 +24,6 @@ int battery_chagreRate(float chargeRate) {
 
 int main() {
   assert(batteryTempRange_check(25));
-  assert(batterySOC_outOfRange(85));
+  assert(batterySOC_outOfRange(70));
   assert(batterySOC_outOfRange(1));
 }

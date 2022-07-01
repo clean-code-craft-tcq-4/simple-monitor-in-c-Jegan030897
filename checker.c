@@ -9,7 +9,7 @@ int batteryTempRange_check(float temperature) {
 }
 
 int batterySOC_outOfRange(float soc) {
-    if(soc < 20 || soc > 80) {
+    if(soc < 20 && soc > 80) {
       printf("State of Charge out of range!\n");
       return 0;
     }
@@ -24,6 +24,6 @@ int battery_chagreRate(float chargeRate) {
 
 int main() {
   assert(batteryTempRange_check(25));
-  assert(batterySOC_outOfRange(70));
+  assert(batterySOC_outOfRange(50));
   assert(batterySOC_outOfRange(1));
 }

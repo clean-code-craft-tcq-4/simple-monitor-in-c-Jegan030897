@@ -44,7 +44,7 @@ int battery_status(bms_e parametersToBe_checked, float checkValue)
 }
 
 int main() {
-  updateBatteryParameterRange();
+  updateBatteryStatus_ParameterRange();
   
   assert(battery_status(TEMPERATURE_RANGE, 25));
   assert(battery_status(SOC_RANGE, 50));

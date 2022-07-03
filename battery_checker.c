@@ -3,7 +3,6 @@
 #include "battery_checker.h"
 
 bms_s battery_checkcase[MAX_PARAMETERS];
-bms_e battery_Parameter;
 
 void print_batteryStatus(void){
     if((TRUE == battery_checkcase[TEMPERATURE_RANGE].status) && (TRUE == battery_checkcase[SOC_RANGE].status) &&
@@ -31,7 +30,7 @@ void updateBatteryStatus_ParameterRange(void){
   battery_checkcase[CHARGE_RATE].max = 0.8;    
 }
 
-int battery_status(battery_Parameter parametersToBe_checked, float checkValue)
+int battery_status(bms_e parametersToBe_checked, float checkValue)
 {
     if((checkValue < battery_checkcase[parametersToBe_checked].min) &&
       (checkValue > battery_checkcase[parametersToBe_checked].max))

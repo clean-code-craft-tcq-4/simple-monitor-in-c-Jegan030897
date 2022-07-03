@@ -12,10 +12,8 @@ void updateBatteryStatus_ParameterRange(void){
 
 int battery_status(bms_e parametersToBe_checked, float checkValue)
 {
-    if((checkValue < battery_checkcase[parametersToBe_checked].min) &&
-      (checkValue > battery_checkcase[parametersToBe_checked].max)) {
-        return battery_checkcase[parametersToBe_checked].status = FALSE;
-    }else{
+    if((checkValue > battery_checkcase[parametersToBe_checked].min) &&
+      (checkValue < battery_checkcase[parametersToBe_checked].max)) {
         return battery_checkcase[parametersToBe_checked].status = TRUE;
     }
 }

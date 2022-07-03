@@ -4,12 +4,6 @@
 
 bms_s battery_checkcase[MAX_PARAMETERS];
 
-void updateBatteryStatus_ParameterRange(void){
-  battery_checkcase[TEMPERATURE_RANGE].bms_Parameter = {FALSE, 0, 45};
-  battery_checkcase[SOC_RANGE].bms_Parameter = {FALSE, 20, 80};
-  battery_checkcase[CHARGE_RATE].bms_Parameter = {FALSE, 1, 0.8};  
-}
-
 int battery_status(bms_e parametersToBe_checked, float checkValue)
 {
     if((checkValue > battery_checkcase[parametersToBe_checked].bms_Parameter.min) &&

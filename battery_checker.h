@@ -16,5 +16,10 @@ typedef struct
   int status;
   float min;
   float max;
+}bms_PrameterRange;
+
+typedef struct
+{
+  bms_PrameterRange bms_Parameter;
 }bms_s;
 

@@ -3,7 +3,7 @@
 #define TRUE   1
 #define FALSE  0
 
-enum batteryStatus
+typedef enum 
 {
   TEMPERATURE_RANGE = 0,
   SOC_RANGE,
@@ -17,3 +17,5 @@ typedef struct
   float min;
   float max;
 }bms_s;
+
+int battery_status(battery_Parameter parametersToBe_checked, float checkValue)

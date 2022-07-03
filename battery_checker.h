@@ -18,4 +18,3 @@ typedef struct
   float max;
 }bms_s;
 
-int battery_status(battery_Parameter parametersToBe_checked, float checkValue)

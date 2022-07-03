@@ -16,5 +16,5 @@ int main() {
   updateBatteryStatus_ParameterRange();
   assert(battery_status(TEMPERATURE_RANGE, 25));
   assert(battery_status(SOC_RANGE, 50));
-  assert(battery_status(CHARGE_RATE, 1));
+  assert(battery_status(CHARGE_RATE, 0.9));
 }

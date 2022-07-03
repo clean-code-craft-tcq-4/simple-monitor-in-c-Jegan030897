@@ -23,3 +23,4 @@ typedef struct
   bms_PrameterRange bms_Parameter;
 }bms_s;
 
+void updateBatteryStatus_ParameterRange(void);

@@ -4,15 +4,6 @@
 
 bms_s battery_checkcase[MAX_PARAMETERS];
 
-void print_batteryStatus(void){
-    if((TRUE == battery_checkcase[TEMPERATURE_RANGE].status) && (TRUE == battery_checkcase[SOC_RANGE].status) &&
-      (TRUE == battery_checkcase[SOC_RANGE].status)){ 
-        printf("Battery Status: Good\n");
-    }else{ 
-        printf("Battery Status: NOT OK\n");
-    }
-}
-
 void updateBatteryStatus_ParameterRange(void){
   battery_checkcase[TEMPERATURE_RANGE].bms_Parameter = {FALSE, 0, 45};
   battery_checkcase[SOC_RANGE].bms_Parameter = {FALSE, 20, 80};
@@ -31,10 +22,7 @@ int battery_status(bms_e parametersToBe_checked, float checkValue)
 
 int main() {
   updateBatteryStatus_ParameterRange();
-  
   assert(battery_status(TEMPERATURE_RANGE, 25));
   assert(battery_status(SOC_RANGE, 50));
   assert(battery_status(CHARGE_RATE, 1));
-  
-  print_batteryStatus();
 }

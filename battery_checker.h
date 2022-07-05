@@ -23,4 +23,6 @@ typedef struct
   bms_PrameterRange bms_Parameter;
 }bms_s;
 
+extern bms_s battery_checkcase[MAX_PARAMETERS];
+
 void updateBatteryStatus_ParameterRange(void);

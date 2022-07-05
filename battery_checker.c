@@ -17,5 +17,4 @@ int main() {
   assert(battery_status(TEMPERATURE_RANGE, 25));
   assert(battery_status(SOC_RANGE, 50));
   assert(battery_status(CHARGE_RATE, 0.9));
-  print_BatteryStatus(battery_checkcase);
 }

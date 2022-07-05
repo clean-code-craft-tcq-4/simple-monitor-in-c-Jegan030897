@@ -26,3 +26,4 @@ typedef struct
 extern bms_s battery_checkcase[MAX_PARAMETERS];
 
 void updateBatteryStatus_ParameterRange(bms_s *Battery_checkcase); 
+void print_BatteryStatus(bms_s *battery_Status);
